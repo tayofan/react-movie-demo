@@ -4,4 +4,102 @@
 
 .memoItmBody {
     width: 289px;
+    height: 31px;
+    z-index: 2000;
+    margin: 200px 0px 0px 200px;
+    position: absolute;
+    border: 2px solid #aaaaaa;
+    background-color: rgb(255,255,255);
+    min-width: none;
+    overflow: hidden;
+}
+
+@keyframes toMin {
+    from {height: var(--ani-heigth);}
+    to   {height: 31px;}
+}
+
+@keyframes toMax {
+    from {
+        height: 40px;
+        resize: none;
+        overflow: hidden;
+    }
+    to  {height: var(--ani-heigth);}
+}
+
+.maxMemo {
+    animation-name: toMax;
+    animation-duration: 0.5s;
+    height: var(--ani-heigth);
+    resize: both;
+    overflow: auto;
+}
+
+.minMemo {
+    animation-name: toMin;
+    animation-duration: 0.5s;
+    height: var(--ani-heigth);
+    resize: none;
+    overflow: hidden;    
+}
+
+.memoItmTop {
+    width: 100%; 
+    height: 27px; 
+    text-align: left; 
+    cursor: default; 
+    background-color: rgb(31, 134, 168); 
+    color: rgb(255, 255, 255);
+}
+
+.memoItmTop .memoItmTitle{
+    padding: 5px; 
+    color: rgb(255, 255, 255); 
+    cursor: default; 
+    position: absolute; 
+    margin-top: -2px; 
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.memoItmMin{
+    width: 23px; 
+    height: 23px; 
+    float: right; 
+    margin: 2px 2px 0px 0px; 
+    padding-right: 0px; 
+    font-weight: bold; 
+    text-align: center; 
+    cursor: pointer; 
+    font-size: 15px; 
+    background-color: rgb(255, 255, 255); 
+    color: rgb(49, 143, 191);
+}
+
+.memoItmBtn{
+    width: 100%; 
+    height: 27px; 
+    padding: 2px 0px 0px 5px;
+    background-color: rgb(255, 255, 255);
+}
+
+.memoItmTxt{
+    width: 100%; 
+    height: 166px; 
+    background-color: rgb(255, 255, 255);
+}
+
+.memoSaveBtn{
+    /* background: url(../../../static/common/images/icon-file.png);  */
+    width: 17px; 
+    height: 17px;
+}
+
+.memoContents {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    resize: none;
+    font-size:12px;
 }

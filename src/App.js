@@ -1,3 +1,4 @@
+import Memo from "./components/Memo";
 import Movie from "./components/Movie";
 import { DUMMY } from "./movieDummy";
 
@@ -16,10 +17,11 @@ function App() {
             ) 
           })
         }
-
+      <Memo></Memo>
       </div>
 
     </div>
+    
   );
 }
 
